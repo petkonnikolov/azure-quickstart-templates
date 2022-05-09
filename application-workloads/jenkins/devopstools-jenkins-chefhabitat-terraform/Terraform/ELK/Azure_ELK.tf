@@ -90,6 +90,7 @@ resource "azurerm_storage_account" "storageAccount" {
   resource_group_name = "${azurerm_resource_group.resourceGroup.name}"
   location     = "${var.Location}"
   account_type = "${var.storageAccType}"
+  enable_https_traffic_only = true
 }
 resource "azurerm_storage_container" "storageContainer" {
   name                  = "container1"
